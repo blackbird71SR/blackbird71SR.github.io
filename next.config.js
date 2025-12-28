@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: false,
-  },
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -17,9 +14,10 @@ const nextConfig = {
         hostname: 'cdn.sanity.io',
         port: '',
         pathname: '**',
-      }
+      },
     ],
   },
+  output: 'export',
 };
 
 module.exports = nextConfig;
